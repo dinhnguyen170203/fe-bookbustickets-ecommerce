@@ -79,6 +79,7 @@ const HistoryBookTicket = (props) => {
     }
   };
   const handleDetailCar = (ticket) => {
+    console.log('ticket', ticket);
     navigate('/book-ticket/detail', { state: ticket });
   };
   const handleUpdateTicket = async () => {

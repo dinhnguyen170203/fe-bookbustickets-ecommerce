@@ -96,31 +96,6 @@ const Trips = (props) => {
           <Search />
         </div>
         <div className='content'>
-          <div className='filter'>
-            <h5>Sắp xếp</h5>
-            <div className='list'>
-              <label>
-                <input
-                  type='radio'
-                  value='option1'
-                  // checked={true}
-                />
-                Mặc định
-              </label>
-              <label>
-                <input type='radio' value='option1' />
-                Mới nhất
-              </label>
-              <label>
-                <input type='radio' value='option1' />
-                Giá giảm dần
-              </label>
-              <label>
-                <input type='radio' value='option1' />
-                Giá tăng dần
-              </label>
-            </div>
-          </div>
           <div className='wrapper'>
             {data && data.length > 0 ? (
               data.map((item, index) => {

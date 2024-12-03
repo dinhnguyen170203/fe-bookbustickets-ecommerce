@@ -101,7 +101,7 @@ const ManageCar = () => {
                 <tbody>
                   {listCar?.data?.map((item, index) => {
                     return (
-                      <tr key={index}>
+                      <tr key={item._id}>
                         <td>{item.name}</td>
                         <td>
                           <img src={item.image} width={'100px'} height={'100px'} alt='ảnh xe' />

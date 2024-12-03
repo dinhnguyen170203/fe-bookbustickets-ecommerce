@@ -40,7 +40,7 @@ const UpdateCar = (props) => {
   const onClickUpdateCar = async () => {
     // if (car !== carCompare) {
     let res = await updateCarAdminService(idCar, car);
-    if (res && res === 'OK') {
+    if (res && res.status === 'OK') {
       toast.success('Cập nhật thành công');
       return;
     }
@@ -180,7 +180,7 @@ const UpdateCar = (props) => {
                   placeholder='...'
                   onChange={handleImageChange}
                 />
-                {imagePreview && <img src={imagePreview} width={'100px'} height={'100px'} />}
+                {imagePreview && <img src={imagePreview} width={'100px'} height={'100px'} alt='' />}
               </div>
               <div className='mb-3 col-12'>
                 <label htmlFor='exampleFormControlInput1' className='form-label'>
@@ -191,6 +191,7 @@ const UpdateCar = (props) => {
                   rows='4'
                   style={{ width: '100%' }}
                   onChange={(e) => setCar({ ...car, note: e.target.value })}
+                  value={car?.note}
                 ></textarea>
               </div>
               <button
