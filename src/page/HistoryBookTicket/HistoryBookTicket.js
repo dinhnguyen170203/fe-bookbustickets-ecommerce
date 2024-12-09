@@ -208,7 +208,7 @@ const HistoryBookTicket = (props) => {
                         <td>
                           {item?.trip?.departure?.value} - {item?.trip?.destination?.value}
                         </td>
-                        <td>{new Date(item?.trip?.dayStart).toISOString().substring(0, 16)}</td>
+                        <td>{item?.trip?.dayStart ? new Date(item?.trip?.dayStart).toISOString().substring(11, 16) : 'Invalid Date'}</td>
                         <td>{item?.numberOfBooked}</td>
                         <td>{item?.totalPrice}</td>
                         <td>
